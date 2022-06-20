@@ -12,6 +12,15 @@ function shortcut(x, y){
 function firstChar(x){
  let y = x.trim();
  return y.charAt(0);
+ }
+ 
+ 3. A function that taking two strings and determining the first occurrence of the second string in the first string. The function should be case insensitive.
+ 
+ function indexOfIgnoreCase(x, y){
+ let x1 = x.toLowerCase();
+ let y1 = y.toLowerCase();
+ let n = x1.indexOf(y1);
+ return n;
 }
 
 
