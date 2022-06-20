@@ -1,5 +1,5 @@
 # basic-javascript
-Compilation of simple JS code
+Compilation of simple JS codes to solve JS Hero tests.
 
 1. A function shortcut that takes two strings and returns the initial letters of the strings
 
