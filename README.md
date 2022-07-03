@@ -225,6 +225,8 @@ function xor(x, y){
  return z;
 }
 
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/boolean_xor.js
+
 20. Strict equality
 
 Function "equals" that checks two values for strict equality.
@@ -649,6 +651,8 @@ for(let i=0; i<xArr.length; i++){
 return fpb[fpb.length-1]; 
 }
 
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/greatCommonDivisor.js
+
 48. break and continue - Prime Numbers
 
 Function "isPrime" that checks whether a passed number is prime. In case of a prime number it should return true, otherwise false.
@@ -673,6 +677,8 @@ let number = 0;
   }
  } 
 }
+
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/checkPrimeNumber.js
 
 49. Nested loops
 
@@ -781,6 +787,8 @@ function reverse(x){
  return reverse(x.substr(1)) + x.charAt(0); 
 }
 
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/stringReversedCharacters.js
+
 55. Roman numerals I
 
 Function "arabic" that converts a Roman number (up to 1000) into an Arabic.
@@ -826,6 +834,8 @@ for(let i = 0; i<arrSort.length; i++){
 
 return jumlah;
 }
+
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/romanToArabicNumbers.js
 
 56. Roman numerals II
 
@@ -938,6 +948,8 @@ let xhsl = [];
  return romVal(xhsl);
 }
 
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/arabicToRomanNumbers1000.js
+
 57. Project Euler
 
 Function "sumMultiples" taking a natural number n and returning the sum of all multiples of 3 and of 5 that are truly less than n.
@@ -962,6 +974,8 @@ function sumMultiples(x){
  
  return jml;
 }
+
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/sumMultiples35_ProjectEuler.js
 
 58. Digit Sum of An Integer
 
@@ -990,6 +1004,8 @@ function digitsum(x){
  }
  return hasil;
 }
+
+* https://github.com/dwi-handoyo/basic-javascript/blob/main/digitSumOfInteger.js
 
 
 
