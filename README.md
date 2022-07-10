@@ -1,377 +1,377 @@
-# basic-javascript
+# Basic Javascript
 
-Compilation of simple JS codes to solve JS Hero tests.
+Compilation of simple JS codes to solve **JS Hero** tests.
 
-1. Logging and Strings
+### 1. Logging and Strings
 
 Function "shout" that takes a string and returns this string duplicated. In addition, the return is logged.
 
 Example: shout('Fire') should return 'FireFire' and should log 'FireFire'.
 
-function shout(x){
- let result = x + x;
-console.log(result);
- return result;
-}
+       function shout(x){
+        let result = x + x;
+        console.log(result);
+        return result;
+       }
 
 "console log" shall be stated prior to "return"
 
-2. String: toUpperCase()
+### 2. String: toUpperCase()
 
-Function "toCase" that takes a string and returns that string in lowercase and uppercase with - as delimiter.
+Function "toCase" that takes a string and returns that string in lowercase and uppercase with "-" as delimiter.
 
 Example: toCase('Mthatha') should return 'mthatha-MTHATHA'.
 
-function toCase(word){
- let low = word.toLowerCase();
- let up = word.toUpperCase();
- return low + '-' + up;
-}
+       function toCase(word){
+        let low = word.toLowerCase();
+        let up = word.toUpperCase();
+        return low + '-' + up;
+       } 
 
-3. String: charAt()
+### 3. String: charAt()
 
 Function "shortcut" that takes two strings and returns the initial letters of theses strings.
 
 Example: shortcut('Amnesty', 'International') should return 'AI'.
 
-function shortcut(word1, word2){
- let one = word1.charAt(0);
- let two = word2.charAt(0);
- return one + two;
-}
+        function shortcut(word1, word2){
+         let one = word1.charAt(0);
+         let two = word2.charAt(0);
+         return one + two;
+        }
 
-4. String: trim()
+### 4. String: trim()
 
 Function "firstChar", which returns the first character that is not a space when a string is passed.
 
 Example: firstChar(' Rosa Parks ') should return 'R'.
 
-function firstChar(word){
- let input = word.trim();
- return input.charAt(0); 
-}
+        function firstChar(word){
+         let input = word.trim();
+         return input.charAt(0);  
+        }
 
-5. String: indexOf()
+### 5. String: indexOf()
 
 Function "indexOfIgnoreCase" taking two strings and determining the first occurrence of the second string in the first string. The function should be case insensitive.
 
 Example: indexOfIgnoreCase('bit','it') and indexOfIgnoreCase('bit','IT') should return 1.
 
-function indexOfIgnoreCase(word1, word2){
- let wordx1 = word1.toLowerCase();
- let wordx2 = word2.toLowerCase();
- let n = wordx1.indexOf(wordx2);
- return n;
-}
+       function indexOfIgnoreCase(word1, word2){
+        let wordx1 = word1.toLowerCase();
+        let wordx2 = word2.toLowerCase();
+        let n = wordx1.indexOf(wordx2);
+        return n;
+       }
 
-6. String: indexOf() with from index
+### 6. String: indexOf() with from index
 
 Function "secondIndexOf", taking two strings and determining the second occurrence of the second string in the first string. If the search string does not occur twice, -1 should be returned.
 
 Example: secondIndexOf('White Rabbit', 'it') should return 10.
 
-function secondIndexOf(word1, word2){
- let wordx1 = word1.toLowerCase();
- let wordx2 = word2.toLowerCase();
- let n1 = wordx1.indexOf(wordx2, 0);
- let n2 = wordx1.indexOf(wordx2, n1+1);
- return n2; 
-}
+       function secondIndexOf(word1, word2){
+        let wordx1 = word1.toLowerCase();
+        let wordx2 = word2.toLowerCase();
+        let n1 = wordx1.indexOf(wordx2, 0);
+        let n2 = wordx1.indexOf(wordx2, n1+1);
+        return n2; 
+       }
 
-7. String: substr()
+### 7. String: substr()
 
 Function "firstWord", taking a string and returning the first word in that string. The first word are all characters up to the first space.
 
 Example: firstWord('see and stop') should return 'see'.
 
-function firstWord(word){
- let n1 = word.indexOf(' ');
- let word1 = word.substr(0, n1);
- return word1;
-}
+       function firstWord(word){
+        let n1 = word.indexOf(' ');
+        let word1 = word.substr(0, n1);
+        return word1;
+       }
 
-8. String: replace()
+### 8. String: replace()
 
 Function "normalize", that replaces '-' with '/' in a date string.
 
 Example: normalize('20-05-2017') should return '20/05/2017'.
 
-function normalize(date){
- let newDate1 = date.replace('-', '/');
- let newDate2 = newDate1.replace('-', '/');
- return newDate2;
-}
+        function normalize(date){
+         let newDate1 = date.replace('-', '/');
+         let newDate2 = newDate1.replace('-', '/');
+         return newDate2;
+        }
 
-9. Fahrenheit
+### 9. Fahrenheit
 
 Function "toFahrenheit" that converts a temperature from Celsius to Fahrenheit.
 
 Example: toFahrenheit(0) should return 32.
 
-function toFahrenheit(c){
- let f = (9/5 * c) + 32;
- return f;
-}
+        function toFahrenheit(c){
+         let f = (9/5 * c) + 32;
+         return f;
+        }
 
-10. Modulo
+### 10. Modulo
 
 Function "onesDigit" that takes a natural number and returns the ones digit of that number.
 
 Example: onesDigit(2674) should return 4.
 
-function onesDigit(x){
- let y = x % 10;
- return y;
-}
+         function onesDigit(x){
+          let y = x % 10;
+          return y;
+         }
 
-11. Math
+### 11. Math
 
 Function "hypotenuse" that calculates the length of the hypotenuse of a right triangle. The length of the two legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid. If a and b are the lengths of the two legs and c is the length of the hypotenuse, the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3, 4) should return 5.
 
-function hypotenuse(a, b){
- let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
- return c;
-}
+         function hypotenuse(a, b){
+          let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+          return c;
+         }
 
-12. min and max
+### 12. min and max
 
 Function "midrange", that calculates the midrange of 3 numbers. The midrange is the mean of the smallest and largest number.
 
 Example: midrange(3, 9, 1) should return (9+1)/2 = 5.
 
-function midrange(x, y, z){
- let a = Math.max(x, y, z);
- let b = Math.min(x, y, z);
- let out = (a + b)/2;
- return out;
-}
+         function midrange(x, y, z){
+          let a = Math.max(x, y, z);
+          let b = Math.min(x, y, z);
+          let out = (a + b)/2;
+         return out;
+        }
 
-13. Math.PI
+### 13. Math.PI
 
 Function "area" that calculates the area of a circle. The function is given the radius of the circle.
 
 Example: area(1) should return PI and area(2) should return 4 * PI.
 
-function area(r){
- let circle = Math.PI * Math.pow(r, 2);
- return circle;
-}
+        function area(r){
+         let circle = Math.PI * Math.pow(r, 2);
+         return circle;
+        }
 
-14. Rounding
+### 14. Rounding
 
 Function "round100" that rounds a number to the nearest hundred.
 
 Example: round100(1749) should return 1700 and round100(856.12) should return 900.
 
-function round100(x){
- let out = Math.round(x/100);
- return out * 100;
-}
+        function round100(x){
+         let out = Math.round(x/100);
+         return out * 100;
+        }
 
-15. Random numbers
+### 15. Random numbers
 
 Function "dice" that returns like a dice a random number between 1 and 6.
 
-function dice(){
- let x = Math.random();
- let out = Math.floor(x * 6) + 1;
- return out;
-}
+         function dice(){
+          let x = Math.random();
+          let out = Math.floor(x * 6) + 1;
+          return out;
+         }
 
-16. parseInt
+### 16. parseInt
 
 Function "add" that takes a string with a summation task and returns its result as a number. Two natural numbers should be added. The summation task is a string of the form '102+17'.
 
 Example: add('102+17') should return 119.
 
-function add(x){
- let n = x.indexOf('+');
- let x1 = parseInt(x.substr(0,n));
- let x2 = parseInt(x.substr(n+1));
- let out = x1 + x2;
- return out;
-}
+         function add(x){
+          let n = x.indexOf('+');
+          let x1 = parseInt(x.substr(0,n));
+          let x2 = parseInt(x.substr(n+1));
+          let out = x1 + x2;
+         return out;
+         }
 
-17. Boolean
+### 17. Boolean
 
 Function "nand" that takes two Boolean values. If both values are true, the result should be false. In the other cases the return should be true.
 
 I.e.: The call nand(true, true) should return false. The calls nand(true, false), nand(false, true) and nand(false, false) should return true.
 
-function nand(x, y){
- let z = !(x && y);
- return z;
-}
+         function nand(x, y){
+          let z = !(x && y);
+          return z;
+         }
 
-18. NOR
+### 18. NOR
 
 Function "nor" that takes two Boolean values. If both values are false, the result should be true. In the other cases the return should be false.
 
 I.e.: The call nor(false, false) should return true. The calls nor(true, false), nor(false, true) and nor(true, true) should return false.
 
-function nor(x, y){
- let z = !(x || y);
- return z;
-}
+         function nor(x, y){
+          let z = !(x || y);
+          return z;
+         }
 
-19. XOR
+### 19. XOR
 
 Function "xor" that takes two Boolean values. If both values are different, the result should be true. If both values are the same, the result should be false.
 
 I.e.: The calls xor(true, false) and xor(false, true) should return true. The calls xor(true, true) and xor(false, false) should return false.
 
-function xor(x, y){
- let z = (x && !y) || (!x && y);
- return z;
-}
+        function xor(x, y){
+         let z = (x && !y) || (!x && y);
+         return z;
+        }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/boolean_xor.js
 
-20. Strict equality
+### 20. Strict equality
 
 Function "equals" that checks two values for strict equality.
 
 Example: equals(1, 1) should return true and equals(1, 2) should return false.
 
-function equals(x, y){
- return x === y;
-}
+        function equals(x, y){
+         return x === y;
+        }
 
-21. Three identical values
+### 21. Three identical values
 
 Function "equals" that checks 3 values for strict equality. The function should only return true if all 3 values are equal.
 
 Example: equals(1, 1, 1) should return true and equals(1, 2, 1) should return false.
 
-function equals(x, y, z){
- let a = (x === y) && (x === z);
- return a;  
-}
+         function equals(x, y, z){
+          let a = (x === y) && (x === z);
+          return a;  
+         }
 
-22. Even numbers
+### 22. Even numbers
 
 Function "isEven" that checks if a passed number is even. If the given number is even, true should be returned, otherwise false.
 
 Example: isEven(2) should return true and isEven(3) should return false.
 
-function isEven(x){
- let z = x%2 === 0;
- return z;
-}
+       function isEven(x){
+        let z = x%2 === 0;
+        return z;
+       }
 
-23. Strict inequality
+### 23. Strict inequality
 
 Function "unequal" that checks 3 values for strict inequality. The function should return true if all three parameters are strict unequal. Otherwise false.
 
 Example: unequal(1, 2, 3) should return true and unequal(1, 1, 2) should return false.
 
-function unequal(x, y, z){
- let a = (x !== y) && (x !== z) && (y !== z);
- return a;
-}
+        function unequal(x, y, z){
+         let a = (x !== y) && (x !== z) && (y !== z);
+         return a;
+        }
 
-24. Compare numbers
+### 24. Compare numbers
 
 Function isThreeDigit that checks if a number is greater than or equal to 100 and less than 1000.
 
 Example: isThreeDigit(500) should return true and isThreeDigit(50) should return false.
 
-function isThreeDigit(x){
- return ((x/100 >= 1) && (x/100 < 10));
-}
+        function isThreeDigit(x){
+         return ((x/100 >= 1) && (x/100 < 10));
+        }
 
-25. if
+### 25. if
 
 Function "equals" that checks two values for strict equality. If the two values are equal, the string 'EQUAL' should be returned. If they are unequal, you should get 'UNEQUAL'.
 
 Example: equals(1, 1) should return 'EQUAL' and equals(1, 2) should return 'UNEQUAL'.
 
-function equals(x, y){
- if(x === y){
-  return 'EQUAL';
- }else{
-  return 'UNEQUAL';
- }
-}
+        function equals(x, y){
+         if(x === y){
+          return 'EQUAL';
+         }else{
+          return 'UNEQUAL';
+         }
+        }
 
-26. Two returns
+### 26. Two returns
 
 function repdigit that determines whether a two-digit decimal is a repdigit or not. If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.
 
 Example: repdigit(22) should return 'Repdigit!' and repdigit(23) should return 'No Repdigit!'.
 
-function repdigit(x){
- let a = Math.floor(x/10);
- let b = x-(a*10);
- if(a == b){
-  return 'Repdigit!';
- }
- return 'No Repdigit!';
-}
+         function repdigit(x){
+          let a = Math.floor(x/10);
+          let b = x-(a*10);
+          if(a == b){
+           return 'Repdigit!';
+          }
+          return 'No Repdigit!';
+         }
 
-27. if...else
+### 27. if...else
 
 Function "addWithSurcharge" that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2.
 
 Example: addWithSurcharge(5, 15) should return 23.
 
-function addWithSurcharge(x, y){
- if(x <= 10){
-  x = x + 1;
-  }else{ 
-  x = x + 2;
- }
- if(y <= 10){
-  y = y + 1;
-  }else{ 
-  y = y + 2;
- }
- return x + y;
-}
+       function addWithSurcharge(x, y){
+        if(x <= 10){
+         x = x + 1;
+        }else{ 
+         x = x + 2;
+        }
+        if(y <= 10){
+         y = y + 1;
+        }else{ 
+         y = y + 2;
+        }
+        return x + y;
+       }
 
-28. else if
+### 28. else if
 
 Function "addWithSurcharge" that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10 and less than or equal to 20, the surcharge is 2. For each amount greater than 20, the surcharge is 3.
 
 Example: addWithSurcharge(10, 30) should return 44.
 
-function addWithSurcharge(x, y){
- if(x <= 10){
-  x = x + 1;
- }else if(x > 10 && x <= 20){
-  x = x + 2;
- }else{
-  x = x + 3;
- }
- if(y <= 10){
-  y = y + 1;
- }else if(y > 10 && y <= 20){
-  y = y + 2;
- }else{
-  y = y + 3;
- }
-return x + y;   
-}
+         function addWithSurcharge(x, y){
+          if(x <= 10){
+           x = x + 1;
+          }else if(x > 10 && x <= 20){
+           x = x + 2;
+          }else{
+           x = x + 3;
+          }
+          if(y <= 10){
+           y = y + 1;
+          }else if(y > 10 && y <= 20){
+           y = y + 2;
+          }else{
+           y = y + 3;
+          }
+           return x + y;   
+          }
 
-29. Arrays
+### 29. Arrays
 
 Function "toArray" that takes 2 values and returns these values in an array.
 
 Example: toArray(5, 9) should return the array [5, 9].
 
-function toArray(x, y){
- return [x, y];
-}
+         function toArray(x, y){
+          return [x, y];
+         }
 
-30. Get array elements
+### 30. Get array elements
 
 Function "getFirstElement" that takes an array and returns the first element of the array.
 
 Example: getFirstElement([1, 2]) should return 1.
 
-function getFirstElement(x){
- return x[0];
-}
+         function getFirstElement(x){
+          return x[0];
+         }
 
 31. Set array elements
 
