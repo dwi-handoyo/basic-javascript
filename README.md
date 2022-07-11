@@ -373,637 +373,631 @@ Example: getFirstElement([1, 2]) should return 1.
           return x[0];
          }
 
-31. Set array elements
+### 31. Set array elements
 
 Function "setFirstElement" that takes an array and an arbitrary variable. The variable should be inserted as the first element in the array. The array should be returned.
 
 Example: setFirstElement([1, 2], 3) should return [3, 2].
 
-function setFirstElement(x, y){
- x[0] = y;
- return x;
-}
+          function setFirstElement(x, y){
+              x[0] = y;
+              return x;
+          }
 
-32. Array: length
+### 32. Array: length
 
 Function "getLastElement" that takes an array and returns the last element of the array.
 
 Example: getLastElement([1, 2]) should return 2.
 
-function getLastElement(x){
- let n = x.length;
- return x[n-1];
-}
+          function getLastElement(x){
+              let n = x.length;
+              return x[n-1];
+          }
 
-33. Sorting arrays
+### 33. Sorting arrays
 
 Function "sort" that takes an array filled with 3 numbers and returns these 3 numbers sorted in ascending order as an array.
 
 Example: sort([2, 3, 1]) should return [1, 2, 3].
 
-function sort(x){
- let max = Math.max(x[0], x[1], x[2]);
- let min = Math.min(x[0], x[1], x[2]);
- let mid = 0; 
- if(x[0] > min && x[0] < max){
-  mid = x[0];
- }else if(x[1] > min && x[1] < max){
-  mid = x[1];
- }else if(x[2] > min && x[2] < max){
-  mid = x[2];
- }
-return [min, mid, max];
-}
+          function sort(x){
+              let max = Math.max(x[0], x[1], x[2]);
+              let min = Math.min(x[0], x[1], x[2]);
+              let mid = 0; 
+              if(x[0] > min && x[0] < max){
+                     mid = x[0];
+              }else if(x[1] > min && x[1] < max){
+                     mid = x[1];
+              }else if(x[2] > min && x[2] < max){
+                     mid = x[2];
+              }
+              return [min, mid, max];
+          }
 
-34. Array: shift() and push()
+### 34. Array: shift() and push()
 
 Function "rotate" that rotates the elements of an array. All elements should be moved one position to the left. The 0th element should be placed at the end of the array. The rotated array should be returned.
 
 Example: rotate(['a', 'b', 'c']) should return ['b', 'c', 'a'].
 
-function rotate(x){
- let firstElement = x.shift();
- x.push(firstElement);
- return x;
-}
+          function rotate(x){
+              let firstElement = x.shift();
+              x.push(firstElement);
+              return x;
+          }
 
-35. Array: indexOf()
+### 35. Array: indexOf()
 
 Function "add" that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
 
 Example: add([1, 2], 3) should return [1, 2, 3] and add([1, 2], 2) should return [1, 2].
 
-function add(x,y){
- let n = x.indexOf(y);
- if(n == -1){
-  x.push(y);
- }
- return x;
-}
+          function add(x,y){
+              let n = x.indexOf(y);
+              if(n == -1){
+                     x.push(y);
+              }
+              return x;
+          }
 
-35. Array: concat()
+### 35. Array: concat()
 
 Function "concatUp" that concatenate two arrays. The longer array should be appended to the shorter array. If both arrays are equally long, the second array should be appended to the first array.
 
 Example: concatUp([1, 2], [3]) should return [3, 1, 2] and concatUp([5, 7], [6, 8]) should return [5, 7, 6, 8].
 
-function concatUp(x, y){
- if(x.length > y.length){
-  return y.concat(x);
- }else{
-  return x.concat(y);
- }
-}
+          function concatUp(x, y){
+              if(x.length > y.length){
+                     return y.concat(x);
+              }else{
+                     return x.concat(y);
+              }
+          }
 
-36. Array: slice()
+### 36. Array: slice()
 
 Function "halve" that copies the first half of an array. With an odd number of array elements, the middle element should belong to the first half.
 
 Example: halve([1, 2, 3, 4]) should return [1, 2].
 
-function halve(x){
- let n = x.length;
- if(n % 2 == 1){
-  return x.slice(0, (n+1)/2);
- }else{
-  return x.slice(0, n/2);
- }
-}
+          function halve(x){
+              let n = x.length;
+              if(n % 2 == 1){
+              return x.slice(0, (n+1)/2);
+              }else{
+                     return x.slice(0, n/2);
+              }
+          }
 
-37. Array: join()
+### 37. Array: join()
 
 Function "list" that takes an array of words and returns a string by concatenating the words in the array, separated by commas and - the last word - by an 'and'. An empty array should return an empty string.
 
 Example: list(['Huey', 'Dewey', 'Louie']) should return 'Huey, Dewey and Louie'.
 
-function list(x){
- let n = x.length;
- if(n >= 2){
-  let firstArray = x.slice(0, n-1);
-  let firstArrayJoin = firstArray.join(', ');
-  let newArray = [firstArrayJoin];
-  newArray[1] = x[n-1];
-  let newArrayJoin = newArray.join(' and ');
-  return newArrayJoin;
- }else{
-  return x.join();
- } 
-}
+          function list(x){
+              let n = x.length;
+              if(n >= 2){
+                     let firstArray = x.slice(0, n-1);
+                     let firstArrayJoin = firstArray.join(', ');
+                     let newArray = [firstArrayJoin];
+                     newArray[1] = x[n-1];
+                     let newArrayJoin = newArray.join(' and ');
+                     return newArrayJoin;
+              }else{
+                     return x.join();
+              } 
+         }
 
-38. Array of arrays
+### 38. Array of arrays
 
 Function "flat" that flattens a two-dimensional array with 3 entries.
 
 Example: flat(loshu) should return [4, 9, 2, 3, 5, 7, 8, 1, 6]. Thereby loshu is the magic square from the example above.
 
-function flat(x){
- let x1 = x[0];
- let x2 = x[1];
- let x3 = x[2];
- let x12 = x1.concat(x2);
- let x123 = x12.concat(x3);
- return x123; 
-}
+          function flat(x){
+              let x1 = x[0];
+              let x2 = x[1];
+              let x3 = x[2];
+              let x12 = x1.concat(x2);
+              let x123 = x12.concat(x3);
+              return x123; 
+          }
 
-39. Comments
+### 39. Comments
 
 Function "median" that takes an array of ascending numbers and returns the median of that numbers.
 
 Example: median([1, 2, 10]) should return 2 and median([1, 2, 10, 100]) should return 6.
 
-function median(x){
- let n = x.length;
- if(n % 2 == 1){
-  return x[(n-1)/2];
- }else{
-  return (x[n/2]+x[n/2-1])/2
- }
-}
+          function median(x){
+              let n = x.length;
+              if(n % 2 == 1){
+              return x[(n-1)/2];
+              }else{
+              return (x[n/2]+x[n/2-1])/2
+              }
+          }
 
-40. undefined
+### 40. undefined
 
 Function "hello" having one parameter and returning 'Hello <parameter>!'. If hello is called without an argument, 'Hello world!' should be returned.
 
 Example: hello('Nala') should return 'Hello Nala!'.
 
-function hello(x){
- if(x === undefined){
-  return 'Hello world!';
- }else{
-  return 'Hello ' + x + '!';
- }
-}
+          function hello(x){
+              if(x === undefined){
+              return 'Hello world!';
+              }else{
+              return 'Hello ' + x + '!';
+              }
+          }
 
-41. null
+### 41. null
 
 Function "cutComment" that takes one line of JavaScript and returns a possible line comment trimmed. If the line contains no line comment, null should be returned. For simplicity, we assume that the code does not contain the comment characters within a string.
 
 Example: cutCommt('let foo; // bar') should return 'bar'.
 
-function cutComment(x){
- let n = x.indexOf('//');
- if(n === -1){
-  return null;
- }else{
-  return x.substr(n+3);
- }
-}
+          function cutComment(x){
+              let n = x.indexOf('//');
+              if(n === -1){
+                     return null;
+              }else{
+                     return x.substr(n+3);
+              }
+          }
 
-42. for loop
+### 42. for loop
 
 Function "addTo" that accepts a number as a parameter and adds all natural numbers smaller or equal than the parameter. The result is to be returned.
 
 Example: addTo(3) should return 1+2+3 = 6.
 
-function addTo(x){
- let sum = 0;
- for(let i=1; i<=x; i++){
-  sum = sum + i;
- }
- return sum;
-}
+          function addTo(x){
+              let sum = 0;
+              for(let i=1; i<=x; i++){
+                     sum = sum + i;
+              }
+              return sum;
+          }
 
-43. Factorial
+### 43. Factorial
 
 Function "factorial" that calculates the factorial of a positive integer.
 
 Example: factorial(3) should return 6.
 
-function factorial(x){
- let fac = 1;
- for(let i=1; i <= x; i++){
-  fac = fac * i;
- }
- return fac;
-}
+          function factorial(x){
+              let fac = 1;
+              for(let i=1; i <= x; i++){
+                     fac = fac * i;
+              }
+              return fac;
+          }
 
-44. Loops and arrays
+### 44. Loops and arrays
 
 Function "mean" that accepts an array filled with numbers and returns the arithmetic mean of those numbers.
 
 Example: mean([1, 2, 3]) should return (1+2+3)/3 = 2.
 
-function mean(x){
- let sum = 0;
- for(let i=0; i < x.length; i++){
-  sum = sum + x[i];
- }
- return sum/x.length;
-}
+          function mean(x){
+              let sum = 0;
+              for(let i=0; i < x.length; i++){
+                     sum = sum + x[i];
+              }
+              return sum/x.length;
+          }
 
-45. while loop
+### 45. while loop
 
 Function "spaces" that takes a natural number n and returns a string of n spaces.
 
 Example: spaces(1) should return ' '.
 
-function spaces(x){
- let space = '';
- while(space.length < x){
-  space = space + ' ';
- }
- return space; 
-}
+          function spaces(x){
+              let space = '';
+              while(space.length < x){
+                     space = space + ' ';
+              }
+              return space; 
+          }
 
-46. do...while loop
+### 46. do...while loop
 
 Function "lcm" that takes two natural numbers and calculates their least common multiple (lcm). The lcm of two natural numbers a und b is the smallest natural number that is divisible by a and b.
 
 Example: lcm(4, 6) should return 12.
 
-function lcm(x, y){
- let kpk = 0;
- do {
-  kpk = kpk + x;
- } while ( kpk % y !== 0);
- return kpk;
-}
+          function lcm(x, y){
+              let kpk = 0;
+              do {
+                     kpk = kpk + x;
+              } while ( kpk % y !== 0);
+          return kpk;
+          }
 
-47. gcd (Greatest Common Divisor) 
+### 47. gcd (Greatest Common Divisor) 
 
 Function "gcd" that takes two natural numbers and calculates their gcd.
 
 Example: gcd(6, 15) should return 3.
 
-function gcd(x, y){
- let xArr = [];
- let yArr = [];
- for(let i=1; i<=x; i++){
-  if( x % i === 0){
-   xArr.push(i);
-  }
-  }
- for(let i=1; i<=y; i++){
-  if( y % i === 0){
-   yArr.push(i); 
-  }
- }
-
-let fpb = []
-for(let i=0; i<xArr.length; i++){
- for(let j=0; j<yArr.length; j++){
-  if(xArr[i] == yArr[j]){
-   fpb.push(xArr[i]);
-  }
- }
-} 
-
-return fpb[fpb.length-1]; 
-}
+          function gcd(x, y){
+              let xArr = [];
+              let yArr = [];
+              for(let i=1; i<=x; i++){
+                     if( x % i === 0){
+                            xArr.push(i);
+                     }
+              }
+              for(let i=1; i<=y; i++){
+                     if( y % i === 0){
+                            yArr.push(i); 
+                     }
+              }
+              let fpb = [];
+              for(let i=0; i<xArr.length; i++){
+                     for(let j=0; j<yArr.length; j++){
+                            if(xArr[i] == yArr[j]){
+                                   fpb.push(xArr[i]);
+                            }
+                     }
+              } 
+              return fpb[fpb.length-1]; 
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/greatCommonDivisor.js
 
-48. break and continue - Prime Numbers
+### 48. break and continue - Prime Numbers
 
 Function "isPrime" that checks whether a passed number is prime. In case of a prime number it should return true, otherwise false.
 
 Example: isPrime(7) should return true and isPrime(8) should return false.
 
-function isPrime(x){
-let number = 0;
- if(x == 1){
-   return false;
-  }else{
-  for(let i = 2; i <= x; i++){
-   if(x % i === 0){
-    number = i; 
-    break;
-   }
-  }
-  if(number == x){
-   return true; 
-  }else{
-   return false;
-  }
- } 
-}
+          function isPrime(x){
+              let number = 0;
+              if(x == 1){
+                     return false;
+              }else{
+                     for(let i = 2; i <= x; i++){
+                            if(x % i === 0){
+                                   number = i; 
+                                   break;
+                            }
+                     }
+                     if(number == x){
+                            return true; 
+                     }else{
+                            return false;
+                     }
+              } 
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/checkPrimeNumber.js
 
-49. Nested loops
+### 49. Nested loops
 
 Function "sum" that calculates the sum of all elements of a two-dimensional array.
 
 Example: sum([[1, 2], [3]]) should return 6.
 
-function sum(a){
- let sum = 0;
- for(let i=0; i<a.length; i++){
-  for(let j=0; j<a[i].length; j++){
-   sum = sum + a[i][j];
-  }
- }
- return sum;
-}
+          function sum(a){
+              let sum = 0;
+              for(let i=0; i<a.length; i++){
+                     for(let j=0; j<a[i].length; j++){
+                            sum = sum + a[i][j];
+                     }
+              }
+              return sum;
+          }
 
-50. The arguments object
+### 50. The arguments object
 
 Function "max" that calculates the maximum of an arbitrary number of numbers.
 
 Example: max(1, 2) should return 2 and max(2, 3, 1) should return 3.
 
-function max(){
-let x = 0;
- for(let i=0; i<arguments.length; i++){
-  if(arguments[i] > x){
-   x = arguments[i];
-  } 
- }
-return x;
-}
+          function max(){
+              let x = 0;
+              for(let i=0; i<arguments.length; i++){
+                     if(arguments[i] > x){
+                            x = arguments[i];
+                     } 
+              }
+              return x;
+          }
 
-51. NaN
+### 51. NaN
 
 Function parseFirstInt that takes a string and returns the first integer present in the string. If the string does not contain an integer, you should get NaN.
 
 Example: parseFirstInt('No. 10') should return 10 and parseFirstInt('Babylon') should return NaN.
 
-function parseFirstInt(x){
- let y = '';
- let n = 0;
- for(let i=0; i<x.length; i++){ 
-  if(Number.isNaN(parseInt(x[i]))){
-   continue;
-  }else{
-   n = i;
-   break;
-  }
- }
- for(let i=n; i<x.length; i++){
-  if(Number.isNaN(parseInt(x[i]))){
-   break;
-  }
-  y = y + x[i];
- }
+          function parseFirstInt(x){
+              let y = '';
+              let n = 0;
+              for(let i=0; i<x.length; i++){ 
+                     if(Number.isNaN(parseInt(x[i]))){
+                            continue;
+                     }else{
+                            n = i;
+                            break;
+                     }
+              }
+              for(let i=n; i<x.length; i++){
+                     if(Number.isNaN(parseInt(x[i]))){
+                            break;
+                     }
+              y = y + x[i];
+              }
 
- if(x[n-1] == '-'){
-  y = -y;
- }
- return parseInt(y);
-}
+          if(x[n-1] == '-'){
+              y = -y;
+          }
+          return parseInt(y);
+        }
 
-52. String: split()
+### 52. String: split()
 
 Function add that takes a string with a summation task and returns its result as a number. A finite number of natural numbers should be added. The summation task is a string of the form '1+19+...+281'.
 
 Example: add('7+12+100') should return 119.
 
-function add(x){
- let sum = 0;
- let numbers = x.split('+');
- for(let i=0; i<numbers.length; i++){
-  sum = sum + parseInt(numbers[i]);
- }
- return sum; 
-}
+          function add(x){
+              let sum = 0;
+              let numbers = x.split('+');
+              for(let i=0; i<numbers.length; i++){
+                     sum = sum + parseInt(numbers[i]);
+              }
+              return sum; 
+          }
 
-53. Functions call functions
+### 53. Functions call functions
 
 Function "sum" that takes an array of numbers and returns the sum of these numbers. Write a function mean that takes an array of numbers and returns the average of these numbers. The mean function should use the sum function.
 
-function sum(x){
- let total = 0;
- for(let i=0; i<x.length; i++){
-  total = total + x[i];
- }
- return total;
-}
+          function sum(x){
+              let total = 0;
+              for(let i=0; i<x.length; i++){
+                     total = total + x[i];
+              }
+              return total;
+          }
 
-function mean(y){
- let average = sum(y)/y.length;
- return average;
-}
+          function mean(y){
+              let average = sum(y)/y.length;
+              return average;
+          }
 
-54. Recursion
+### 54. Recursion
 
 Function "reverse" that reverses the order of the characters in a string. The function should be recursive.
 
 Example: reverse('live') should return 'evil'.
 
-function reverse(x){
- if( x === ''){
-  return '';
- }
- return reverse(x.substr(1)) + x.charAt(0); 
-}
+          function reverse(x){
+              if( x === ''){
+                     return '';
+              }
+          return reverse(x.substr(1)) + x.charAt(0); 
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/stringReversedCharacters.js
 
-55. Roman numerals I
+### 55. Roman numerals I
 
 Function "arabic" that converts a Roman number (up to 1000) into an Arabic.
 
 Example: arabic('CDLXXXIII') should return 483.
 
-function arabic(x){
- let arr = [];
- for(let i=0; i<x.length; i++){
-  if(x[i] === 'I'){
-   arr.push(1);
-  }else if(x[i] === 'V'){
-   arr.push(5);
-  }else if(x[i] === 'X'){
-   arr.push(10);
-  }else if(x[i] === 'L'){
-   arr.push(50);
-  }else if(x[i] === 'C'){
-   arr.push(100);
-  }else if(x[i] === 'D'){
-   arr.push(500);
-  }else{
-   arr.push(1000);
-  }
- }
-console.log(arr);
+          function arabic(x){
+              let arr = [];
+              for(let i=0; i<x.length; i++){
+                     if(x[i] === 'I'){
+                            arr.push(1);
+                     }else if(x[i] === 'V'){
+                            arr.push(5);
+                     }else if(x[i] === 'X'){
+                            arr.push(10);
+                     }else if(x[i] === 'L'){
+                            arr.push(50);
+                     }else if(x[i] === 'C'){
+                            arr.push(100);
+                     }else if(x[i] === 'D'){
+                            arr.push(500);
+                     }else{
+                            arr.push(1000);
+                     }
+              }
+              console.log(arr);
 
-let arrSort = []; 
-for(let i=0; i<arr.length-1; i++){
- if(arr[i]>=arr[i+1]){
-  arrSort.push(arr[i])
- }else{
-  arrSort.push(-arr[i])
- }
-}
-arrSort.push(arr[arr.length-1]);
-console.log(arrSort);
+              let arrSort = []; 
+              for(let i=0; i<arr.length-1; i++){
+                     if(arr[i]>=arr[i+1]){
+                            arrSort.push(arr[i])
+                     }else{
+                            arrSort.push(-arr[i])
+                     }
+              }
+              arrSort.push(arr[arr.length-1]);
+              console.log(arrSort);
 
-let jumlah = 0;
-for(let i = 0; i<arrSort.length; i++){
- jumlah = jumlah + arrSort[i];
-}
+              let jumlah = 0;
+              for(let i = 0; i<arrSort.length; i++){
+                     jumlah = jumlah + arrSort[i];
+              }
 
-return jumlah;
-}
+          return jumlah;
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/romanToArabicNumbers.js
 
-56. Roman numerals II
+### 56. Roman numerals II
 
 Function "roman" that converts an Arabic number (up to 1000) into a Roman numeral.
 
 Example: roman(483) should return 'CDLXXXIII'.
 
-function romVal(x){
-let xRom = []
-let y1 = '';
-let y2 = '';
-let y3 = '';
+          function romVal(x){
+              let xRom = []
+              let y1 = '';
+              let y2 = '';
+              let y3 = '';
 
-if(x[0] == 0){
- xRom.push('');
-}else{
- xRom.push('M');
-}
+              if(x[0] == 0){
+                     xRom.push('');
+              }else{
+                     xRom.push('M');
+              }
 
-if(x[1] == 0){
- xRom.push('');
-}else if(x[1] > 0 && x[1] < 4){
- while(y1.length < x[1]){
-  y1 = y1 + 'C';  
- }xRom.push(y1);
-}else if(x[1] == 4){
-  y1 = 'CD';
-  xRom.push(y1);
-}else if(x[1] == 5){
-  y1 = 'D';
-  xRom.push(y1);
-}else if(x[1] > 5 && x[1] < 9){
-  y1 = 'D';
- while(y1.length < x[1]-4){
-  y1 = y1 + 'C';  
- }xRom.push(y1);
-}else{
-  y1 = 'CM';
-  xRom.push(y1);
-}
+              if(x[1] == 0){
+                     xRom.push('');
+              }else if(x[1] > 0 && x[1] < 4){
+                     while(y1.length < x[1]){
+                     y1 = y1 + 'C';  
+                     }xRom.push(y1);
+              }else if(x[1] == 4){
+                     y1 = 'CD';
+                     xRom.push(y1);
+              }else if(x[1] == 5){
+                     y1 = 'D';
+                     xRom.push(y1);
+              }else if(x[1] > 5 && x[1] < 9){
+                     y1 = 'D';
+                     while(y1.length < x[1]-4){
+                            y1 = y1 + 'C';  
+                     }xRom.push(y1);
+              }else{
+                     y1 = 'CM';
+                     xRom.push(y1);
+              }
 
-if(x[2] == 0){
- xRom.push('');
-}else if(x[2] > 0 && x[2] < 4){
- while(y2.length < x[2]){
-  y2 = y2 + 'X';  
- }xRom.push(y2);
-}else if(x[2] == 4){
-  y2 = 'XL';
-  xRom.push(y2);
-}else if(x[2] == 5){
-  y2 = 'L';
-  xRom.push(y2);
-}else if(x[2] > 5 && x[2] < 9){
-  y2 = 'L';
-  while(y2.length < x[2]-4){
-  y2 = y2 + 'X';  
- }xRom.push(y2);
-}else{
-  y2 = 'XC';
-  xRom.push(y2);
-}
+              if(x[2] == 0){
+                     xRom.push('');
+              }else if(x[2] > 0 && x[2] < 4){
+                     while(y2.length < x[2]){
+                            y2 = y2 + 'X';  
+                     }xRom.push(y2);
+              }else if(x[2] == 4){
+                     y2 = 'XL';
+                     xRom.push(y2);
+              }else if(x[2] == 5){
+                     y2 = 'L';
+                     xRom.push(y2);
+              }else if(x[2] > 5 && x[2] < 9){
+                     y2 = 'L';
+                     while(y2.length < x[2]-4){
+                            y2 = y2 + 'X';  
+                     }xRom.push(y2);
+              }else{
+                     y2 = 'XC';
+                     xRom.push(y2);
+              }
 
-if(x[3] == 0){
- xRom.push('');
-}else if(x[3] > 0 && x[3] < 4){
- while(y3.length < x[3]){
-  y3 = y3 + 'I';  
- }xRom.push(y3);
-}else if(x[3] == 4){
-  y3 = 'IV';
-  xRom.push(y3);
-}else if(x[3] == 5){
-  y3 = 'V';
-  xRom.push(y3);
-}else if(x[3] > 5 && x[3] < 9){
-  y3 = 'V';
- while(y3.length < x[3]-4){
-  y3 = y3 + 'I';  
- }xRom.push(y3);
-}else{
-  y3 = 'IX';
-  xRom.push(y3);
-}
-
-return xRom[0] + xRom[1] + xRom[2] + xRom[3];
-
-}
+              if(x[3] == 0){
+                     xRom.push('');
+              }else if(x[3] > 0 && x[3] < 4){
+                     while(y3.length < x[3]){
+                            y3 = y3 + 'I';  
+                     }xRom.push(y3);
+              }else if(x[3] == 4){
+                     y3 = 'IV';
+                     xRom.push(y3);
+              }else if(x[3] == 5){
+                     y3 = 'V';
+                     xRom.push(y3);
+              }else if(x[3] > 5 && x[3] < 9){
+                     y3 = 'V';
+                     while(y3.length < x[3]-4){
+                            y3 = y3 + 'I';  
+                     }xRom.push(y3);
+              }else{
+                     y3 = 'IX';
+                     xRom.push(y3);
+              }
+              return xRom[0] + xRom[1] + xRom[2] + xRom[3];
+          }
  
-function roman(x){
-let xhsl = [];
+          function roman(x){
+              let xhsl = [];
 
- if(x == 1000){
-  x1 = x/1000;
-  xhsl = [1, 0, 0, 0];
- }else if(x>= 100 && x<1000){
-  xhsl = [0];
-  xhsl.push(Math.floor(x/100));
-  xhsl.push(Math.floor((x%100)/10));
-  xhsl.push((x%100)%10);
- }else if(x>=10 && x<100){
-  xhsl = [0, 0];
-  xhsl.push(Math.floor(x/10));
-  xhsl.push(x%10);
- }else{
-  xhsl = [0, 0, 0]
-  xhsl.push(x);
- }
- 
- return romVal(xhsl);
-}
+              if(x == 1000){
+                     x1 = x/1000;
+                     xhsl = [1, 0, 0, 0];
+              }else if(x>= 100 && x<1000){
+                     xhsl = [0];
+                     xhsl.push(Math.floor(x/100));
+                     xhsl.push(Math.floor((x%100)/10));
+                     xhsl.push((x%100)%10);
+              }else if(x>=10 && x<100){
+                     xhsl = [0, 0];
+                     xhsl.push(Math.floor(x/10));
+                     xhsl.push(x%10);
+              }else{
+                     xhsl = [0, 0, 0]
+                     xhsl.push(x);
+              }
+            return romVal(xhsl);
+           }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/arabicToRomanNumbers1000.js
 
-57. Project Euler
+### 57. Project Euler
 
 Function "sumMultiples" taking a natural number n and returning the sum of all multiples of 3 and of 5 that are truly less than n.
 
 Example: All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78. sumMultiples(20) should return 78.
 
-function sumMultiples(x){
- let arr = [];
+          function sumMultiples(x){
+              let arr = [];
  
- for(let i=1; i<x; i++){
-  if(i%3 == 0){
-   arr.push(i);
-  }else if(i%5 == 0){
-   arr.push(i)  
-  }
- }
+              for(let i=1; i<x; i++){
+                     if(i%3 == 0){
+                            arr.push(i);
+                     }else if(i%5 == 0){
+                            arr.push(i)  
+                     }
+              }
  
- let jml = 0;
- for(let i=0; i<arr.length; i++){
-  jml = jml + arr[i];
- }
- 
- return jml;
-}
+              let jml = 0;
+              for(let i=0; i<arr.length; i++){
+                     jml = jml + arr[i];
+              }
+               return jml;
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/sumMultiples35_ProjectEuler.js
 
-58. Digit Sum of An Integer
+### 58. Digit Sum of An Integer
 
 Function "digitsum" that calculates the digit sum of an integer. The digit sum of an integer is the sum of all its digits.
 
 Example: digitsum(192) should return 12.
 
-function digit(x){
- if(x < 1){
-  return 0; 
- }
-return digit(x/10) + 1;
-}
+          function digit(x){
+              if(x < 1){
+                     return 0; 
+              }
+              return digit(x/10) + 1;
+          }
 
-function digitsum(x){
- let n = digit(x);
- let arr = [];
- let hasil = 0;
- arr.push(Math.floor(x/(Math.pow(10, n-1))));
+          function digitsum(x){
+              let n = digit(x);
+              let arr = [];
+              let hasil = 0;
+              arr.push(Math.floor(x/(Math.pow(10, n-1))));
  
- for(let i=n-1; i>0; i--){
-  arr.push(Math.floor(x%Math.pow(10, i)*10/Math.pow(10, i)));
- }
- for(let i=0; i<arr.length; i++){
-  hasil = hasil + arr[i];
- }
- return hasil;
-}
+              for(let i=n-1; i>0; i--){
+                     arr.push(Math.floor(x%Math.pow(10, i)*10/Math.pow(10, i)));
+              }
+              for(let i=0; i<arr.length; i++){
+                     hasil = hasil + arr[i];
+              }
+          return hasil;
+          }
 
 * https://github.com/dwi-handoyo/basic-javascript/blob/main/digitSumOfInteger.js
 
